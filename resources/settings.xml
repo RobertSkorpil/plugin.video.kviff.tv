@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<settings>
+    <category id="default" label="31001">
+		<setting label="Účet KVIFF.TV" type="lsep"/>
+		<setting id="token" type="text" label="Access token" default="" visible="false"/>
+	</category>
+</settings>

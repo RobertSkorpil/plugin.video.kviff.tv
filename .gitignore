@@ -1,0 +1,5 @@
+.vs/
+__pycache__/
+pub/
+resources/__pycache__/
+resources/lib/__pycache__/

@@ -1,0 +1,24 @@
+<addon id="plugin.video.kviff.tv" name="KVIFF.TV" provider-name="robskorpil" version="0.0.1">
+	<requires>
+		<import addon="xbmc.python" version="3.0.0" />
+		<import addon="script.module.requests" version="2.22.0" />
+		<import addon="script.module.routing" version="0.2.3" />
+		<import addon="script.module.inputstreamhelper" version="0.3.3" />
+		<import addon="script.module.qrcode" version="5.2" />
+		<import addon="script.module.beautifulsoup4" version="4.6.2" />
+	</requires>
+	<extension point="xbmc.python.pluginsource" library="main.py">
+		<provides>video</provides>
+	</extension>
+	<extension point="xbmc.addon.metadata">
+		<summary lang="en_GB">KVIFF.TV</summary>
+		<summary lang="cs_CZ">KVIFF.TV</summary>
+		<description lang="en_GB">Doplněk pro streamovací službu KVIFF.TV</description>
+		<description lang="cs_CZ">Doplněk pro streamovací službu KVIFF.TV</description>
+		<platform>all</platform>
+		<news>První verze pluginu pro Kodi 19</news>
+		<assets>
+			<icon>resources/icon.png</icon>
+		</assets>
+	</extension>
+</addon>

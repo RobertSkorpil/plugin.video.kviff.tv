@@ -1,0 +1,3 @@
+import plugin
+
+plugin.run()
