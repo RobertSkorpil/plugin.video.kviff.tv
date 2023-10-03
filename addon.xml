@@ -1,4 +1,4 @@
-<addon id="plugin.video.kviff.tv" name="KVIFF.TV" provider-name="robskorpil" version="0.0.1">
+<addon id="plugin.video.kviff.tv" name="KVIFF.TV" provider-name="robskorpil" version="0.0.2">
 	<requires>
 		<import addon="xbmc.python" version="3.0.0" />
 		<import addon="script.module.requests" version="2.22.0" />

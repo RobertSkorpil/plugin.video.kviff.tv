@@ -137,7 +137,7 @@ def login():
 	token = ''
 	ensure_logged_in()
 	xbmcplugin.endOfDirectory(plugin.handle)
-	xbmc.executebuiltin('Action(Back)')
+	xbmc.executebuiltin('Container.Update(%s)'%plugin.url_for(root))
 
 @plugin.route('/logoff')
 def logoff():
@@ -145,7 +145,7 @@ def logoff():
 	token = ''
 	addon.setSetting(id='token', value=token)
 	xbmcplugin.endOfDirectory(plugin.handle)
-	xbmc.executebuiltin('Action(Back)')
+	xbmc.executebuiltin('Container.Update(%s)'%plugin.url_for(root))
 
 @plugin.route('/play/<id>')
 def play(id):
