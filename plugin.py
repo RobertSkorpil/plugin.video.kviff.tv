@@ -111,7 +111,7 @@ def extract_text(html):
 	for p in ps:
 		text += p.text
 		text += '\n'
-	if not p:
+	if not text:
 		text = html
 	return text
 
