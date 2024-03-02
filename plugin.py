@@ -123,8 +123,12 @@ def make_film_item(f):
 		'title': f['title'],
 		'originaltitle': f['originalTitle'],
 		'duration': int(f['duration'] / 1000),
-		'plotoutline': extract_text(f['synopsis']) ,
-		'plot': extract_text(f['description']) 
+		'plotoutline': extract_text(f['synopsis']),
+		'plot': extract_text(f['description']),
+		'year': f['year'],
+		'director': f['directors'],
+		'genre': f['genres'],
+		'country': f['countries']
 		})
 
 	film_item = (plugin.url_for(play, f['id']), film_list_item, False)
@@ -188,6 +192,7 @@ def collection(id):
 		items.append(make_film_item(f))
 	xbmcplugin.addDirectoryItems(plugin.handle, items, len(items))
 	xbmcplugin.endOfDirectory(plugin.handle)
+	xbmcplugin.setContent(plugin.handle, "movies")
 
 @plugin.route('/collections')
 def collections():
@@ -214,6 +219,7 @@ def collections():
 #	xbmc.log(str(items), 3)
 	xbmcplugin.addDirectoryItems(plugin.handle, items, len(items))
 	xbmcplugin.endOfDirectory(plugin.handle)
+	xbmcplugin.setContent(plugin.handle, "movies")
 
 @plugin.route('/genre/<id>')
 def genre(id):
@@ -224,6 +230,7 @@ def genre(id):
 		items.append(make_film_item(f))	
 	xbmcplugin.addDirectoryItems(plugin.handle, items, len(items))
 	xbmcplugin.endOfDirectory(plugin.handle)
+	xbmcplugin.setContent(plugin.handle, "movies")
 
 @plugin.route('/genres')
 def genres():
